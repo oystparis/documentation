@@ -1,0 +1,109 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PaymentAPI",
+		"_postman_id": "1deaedf1-a894-bb9c-f54a-155fa7a8ec2a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "payment",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/payment/payments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer dfdeff8d4b36ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\":{\n\t\t\"value\":10000,\n\t\t\"currency\":\"EUR\"\n\t},\n\t\"is_3d\":false,\n\t\"label\":\"ThisWillAppearOnTheShoppersBankStatement\",\n\t\"notification_url\":\"http://merchantdomain.fr/notify\",\n\t\"redirects\":{\n\t\t\"cancel_url\":\"https://merchantdomain.fr/cancel\",\n\t\t\"error_url\":\"https://merchantdomain.fr/error\",\n\t\t\"return_url\":\"https://merchantdomain.fr/return\"\n\t},\n\t\"user\":{\n\t\t\"additional_data\":{\n\t\t\t\"data\":\"data\"\n\t\t},\n\t\t\"addresses\":[{\n\t\t\t\"city\":\"Paris\",\n\t\t\t\"company_name\":\"Work\",\n\t\t\t\"complementary\":\"additional\",\n\t\t\t\"country\":\"france\",\n\t\t\t\"first_name\":\"Jean\",\n\t\t\t\"label\":\"maison\",\n\t\t\t\"last_name\":\"dupond\",\n\t\t\t\"postcode\":\"75000\",\n\t\t\t\"region\" : \"ile-de-france\",\n\t\t\t\"street\":\"1 rue des coquelicots\"\n\t\t}],\n\t\t\"billing_addresses\":[{\n\t\t\t\"city\":\"Paris\",\n\t\t\t\"company_name\":\"Work\",\n\t\t\t\"complementary\":\"additional\",\n\t\t\t\"country\":\"france\",\n\t\t\t\"first_name\":\"Jean\",\n\t\t\t\"label\":\"maison\",\n\t\t\t\"last_name\":\"dupond\",\n\t\t\t\"postcode\":\"75000\",\n\t\t\t\"region\" : \"ile-de-france\",\n\t\t\t\"street\":\"1 rue des coquelicots\"\n\t\t}],\n\t\t\"email\":\"shopperEmail@email.com\",\n\t\t\"first_name\":\"shopperFirstName\",\n\t\t\"language\":\"FR\",\n\t\t\"last_name\":\"shopperLastName\",\n\t\t\"phone\":\"+33611111111\"\n\t}\n}"
+				},
+				"description": "Ask for payments 42,00"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel_payment",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/payment/payments/PAYMENT_ID/cancel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer dfdeff8d4b36ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "Ask for payments 42,00"
+			},
+			"response": []
+		},
+		{
+			"name": "refund_payment",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/payments/PAYMENT_ID/refund",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer dfdeff8d4b36ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\":{\n\t\t\"value\": 2000,\n\t\t\"currency\": \"EUR\"\n\t}\n}"
+				},
+				"description": "Ask for payments 42,00"
+			},
+			"response": []
+		},
+		{
+			"name": "cancel_or_refund_payment",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/payment/payments/PAYMENT_ID/cancel_or_refund",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer dfdeff8d4b36ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": "Ask for payments 42,00"
+			},
+			"response": []
+		}
+	]
+}

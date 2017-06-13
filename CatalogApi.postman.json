@@ -1,0 +1,106 @@
+{
+	"variables": [],
+	"info": {
+		"name": "catalog api",
+		"_postman_id": "753e664d-bea3-7430-3aa0-e78ddf91d09b",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.sandbox.oyst.eu/catalog/v1/products",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/catalog/v1/products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "GET "
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sandbox.oyst.eu/catalog/v1/products",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/catalog/v1/products",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"products\":[{\n\t\t\"reference\":\"refMerchantt\",\n\t\t\"is_materialized\":false,\n\t\t\"title\":\"titlet\",\n\t\t\"condition\":\"new\",\n\t\t\"short_description\":\"little description\",\n\t\t\"url\":\"http://www.myawsomeproduct.com\",\n\t\t\"tags\":[\n\t\t\t\"1st tag\",\n\t\t\t\"2nd tag\"\n\t\t],\n\t\t\"amount_including_taxes\":{\n\t\t\t\"value\":4200,\n\t\t\t\"currency\":\"EUR\"\n\t\t},\n\t\t\"categories\":[{\n\t\t\t\"is_main\":true,\n\t\t\t\"reference\":\"refCategorie\",\n\t\t\t\"title\":\"titre categorie\"\n\t\t}],\n\t\t\"manufacturer\":\"marque/fabricant\",\n\t\t\"images\":[\n\t\t\t\"http://www.image1.fr\",\n\t\t\t\"http://www.image2.fr\"\n\t\t],\n\t\t\"size\":{\n\t\t\t\"depth\" : 12,\n\t\t\t\"height\" : 17,\n\t\t\t\"width\" : 13\n\t\t},\n\t\t\"available_quantity\":42,\n\t\t\"weight\":\"150\",\n\t\t\"ean\":\"986518465\",\n\t\t\"upc\":\"9874562\",\n\t\t\"isbn\":\"987123\",\n\t\t\"related_products\":[\n\t\t\t\"ref1\",\n\t\t\t\"ref2\"\n\t\t]\n\t}]\n}"
+				},
+				"description": "POST"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sandbox.oyst.eu/catalog/v1/products",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/catalog/v1/products/2035a63e-299e-4f96-85e1-21804e9edfd9",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": "delete"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sandbox.oyst.eu/catalog/v1/products/e3907ff1-7334-4f86-afc8-f9285d6469f8",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/catalog/v1/products/446261b7-41ed-48c3-bdf4-6382170cd433",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"product\":{\n\t\t\"reference\":\"refMerchantt\",\n\t\t\"condition\":\"new\",\n\t\t\"short_description\":\"little description\",\n\t\t\"url\":\"http://www.myawsomeproduct.com\",\n\t\t\"amount_including_taxes\":{\n\t\t\t\"value\":4200,\n\t\t\t\"currency\":\"EUR\"\n\t\t},\n\t\t\t\"categories\":[{\n\t\t\t\"is_main\":true,\n\t\t\t\"reference\":\"refCategorie\",\n\t\t\t\"title\":\"titre categorie\"\n\t\t}],\n\t\t\"images\":[\n\t\t\t\"http://www.image1.fr\",\n\t\t\t\"http://www.image2.fr\"\n\t\t],\n\t\t\"available_quantity\":42,\n\t\t\"ean\":\"986518465\",\n\t\t\"upc\":\"9874562\",\n\t\t\"isbn\":\"987123\",\n\t\t\"related_products\":[\n\t\t\t\"ref1\",\n\t\t\t\"ref2\"\n\t\t]\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

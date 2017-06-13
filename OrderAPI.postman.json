@@ -1,0 +1,53 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Order API",
+		"_postman_id": "9416f9d7-9371-32e4-01d6-60fc0d2741e7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api.sandbox.oyst.eu/order/v1/orders",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/order/v1/orders",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://api.sandbox.oyst.eu/order/v1/orders copy",
+			"request": {
+				"url": "https://api.sandbox.oyst.eu/order/v1/orders/61129bf1-62c4-4a93-af54-0e65d48e95eb",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer dfdeff8d4b37ec2884aabfe26c57a159fbfd895f44d20beec3a41f0c773314c",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"status\": \"accepted\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
