@@ -32,6 +32,6 @@
  		})
   }
 </script>
-<script src="https://cdn.oyst.com/1click/script/script.min.js"> </script>
+<script src="https://cdn.sandbox.oyst.eu/1click/script/script.min.js"> </script>
 
 </body>
